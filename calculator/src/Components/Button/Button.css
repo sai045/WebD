@@ -1,0 +1,15 @@
+.calculatorButton {
+  border: 2px solid black;
+  height: 50px;
+  width: 54px;
+  margin: 5px 15px;
+  border-radius: 5px;
+  float: left;
+}
+
+.calculatorButton button {
+  text-align: center;
+  border: none;
+  background-color: white;
+  transform: translate(0, 50%);
+}

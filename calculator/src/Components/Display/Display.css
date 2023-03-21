@@ -1,0 +1,11 @@
+.calculatorDisplay {
+  width: 83%;
+  height: 50px;
+  margin: 20px auto;
+  border: 2px solid black;
+}
+
+.calculatorDisplay p {
+  text-align: right;
+  padding: 0px 5px;
+}
