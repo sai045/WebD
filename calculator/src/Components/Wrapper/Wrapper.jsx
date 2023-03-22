@@ -8,6 +8,21 @@ const Wrapper = () => {
   const [operation, setOperation] = useState(null);
   const [state, setState] = useState(0);
   const [firstValue, setFirstValue] = useState(null);
+
+  const cal = (number1, operand, number2) => {
+    switch (operand) {
+      case "+":
+        return number1 + number2;
+      case "-":
+        return number1 - number2;
+      case "*":
+        return number1 * number2;
+      case "/":
+        return number1 / number2;
+      default:
+        return state;
+    }
+  };
   const getValue = (value) => {
     var res;
     if (parseInt(value) === value) {
@@ -15,22 +30,64 @@ const Wrapper = () => {
     } else if (value === "<") {
       setState(parseInt(state / 10));
     } else if (value === "+") {
-      setOperation("+");
+      if (operation == null) {
+        setFirstValue(state);
+        setOperation("+");
+        setState(0);
+      } else {
+        setOperation("+");
+        setState(cal(firstValue, operation, state));
+        setFirstValue(cal(firstValue, operation, state));
+        setState(0);
+      }
     } else if (value === "-") {
-      setOperation("-");
+      if (operation === null) {
+        setFirstValue(state);
+        setOperation("-");
+        setState(0);
+      } else {
+        setOperation("-");
+        setState(cal(firstValue, operation, state));
+        setFirstValue(cal(firstValue, operation, state));
+        setState(0);
+      }
     } else if (value === "*") {
-      setOperation("*");
+      if (operation === null) {
+        setFirstValue(state);
+        setOperation("*");
+        setState(0);
+      } else {
+        setOperation("*");
+        setState(cal(firstValue, operation, state));
+        setFirstValue(cal(firstValue, operation, state));
+        setState(0);
+      }
     } else if (value === "/") {
-      setOperation("/");
+      if (operation === null) {
+        setFirstValue(state);
+        setOperation("/");
+        setState(0);
+      } else {
+        setOperation("/");
+        setState(cal(firstValue, operation, state));
+        setFirstValue(cal(firstValue, operation, state));
+        setState(0);
+      }
     } else if (value === "=") {
       switch (operation) {
         case "+":
+          setState(firstValue + state);
+          res = firstValue + state;
+          setFirstValue(res);
           break;
         case "-":
+          setState(firstValue - state);
           break;
         case "*":
+          setState(firstValue * state);
           break;
         case "/":
+          setState(firstValue / state);
           break;
         default:
           setState(state);
