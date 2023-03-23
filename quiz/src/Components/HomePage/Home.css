@@ -1,0 +1,18 @@
+.home {
+  margin: auto;
+  transform: translateY(125%);
+}
+
+.home button {
+  width: 160px;
+  height: 35px;
+  background-color: white;
+  color: blue;
+  font-size: 19px;
+  border-radius: 20px;
+  margin: 11px;
+}
+
+.home button:hover{
+  cursor: pointer;
+}
