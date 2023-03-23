@@ -1,0 +1,32 @@
+.questionPage {
+  margin: auto;
+  transform: translateY(110%);
+}
+
+.options {
+  width: 250px;
+  margin: 10px auto;
+  position: relative;
+  background-color: white;
+  height: 35px;
+}
+
+.options p {
+  display: inline-block;
+  width: 60%;
+  text-align: left;
+  margin-top: 6px;
+}
+
+.options button {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 15%;
+  /* background-color: blue; */
+}
+
+.question {
+  width: 250px;
+  margin: auto;
+}
