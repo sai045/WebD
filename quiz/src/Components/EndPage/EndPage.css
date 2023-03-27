@@ -1,0 +1,28 @@
+.endPage button {
+  width: 160px;
+  height: 35px;
+  background-color: white;
+  color: blue;
+  font-size: 19px;
+  border-radius: 20px;
+  margin: 11px;
+}
+
+.endPage button:hover {
+  cursor: pointer;
+}
+
+.endPage input {
+  width: 160px;
+  height: 35px;
+  background-color: white;
+  color: blue;
+  font-size: 19px;
+  border-radius: 20px;
+  margin: 11px;
+  text-align: center;
+}
+
+.endPage{
+    transform: translateY(70%);
+}

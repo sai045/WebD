@@ -1,6 +1,6 @@
 .questionPage {
   margin: auto;
-  transform: translateY(110%);
+  transform: translateY(80%);
 }
 
 .options {
@@ -23,10 +23,34 @@
   left: 0;
   height: 100%;
   width: 15%;
-  /* background-color: blue; */
 }
 
 .question {
   width: 250px;
   margin: auto;
+}
+
+.progressBar {
+  width: 250px;
+  margin: auto;
+  height: 85px;
+}
+
+.score {
+  float: left;
+  width: 50%;
+}
+
+.Bar {
+  float: left;
+  width: 50%;
+  transform: translateY(85%);
+}
+
+.score h2 {
+  margin: 0;
+}
+
+.score h3 {
+  margin: 0;
 }

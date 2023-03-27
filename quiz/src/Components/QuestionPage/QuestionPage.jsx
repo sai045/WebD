@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import { Question } from "./Question";
 import "./QuestionPage.css";
+import ProgressBar from "@ramonak/react-progress-bar";
 
-const QuestionPage = () => {
+const QuestionPage = ({ score, setScore }) => {
+  const [questionNumber, setQuestionNumber] = useState(0);
+  const questions = [
+    {
+      Question: "What is 2+2?",
+      A: "3",
+      B: "4",
+      C: "5",
+      D: "6",
+      Answer: "B"
+    },
+    {
+      Question: "What is 2+2?feq3wd",
+      A: "3",
+      B: "4",
+      C: "5",
+      D: "6",
+      Answer: "B"
+    },
+    {
+      Question: "What is 2+2?",
+      A: "3",
+      B: "4",
+      C: "5",
+      D: "6",
+      Answer: "B"
+    }
+  ];
   return (
     <div className="questionPage">
-      <h2 className="question">Question</h2>
-      <div className="options">
-        <button>A</button>
-        <p>Apple</p>
+      <div className="progressBar">
+        <div className="Bar">
+          <ProgressBar
+            completed={(questionNumber * 100) / questions.length}
+            customLabel={`${questionNumber}/${questions.length}`}
+          />
+        </div>
+        <div className="score">
+          <h3>Score</h3>
+          <h2>{score}</h2>
+        </div>
       </div>
-      <div className="options">
-        <button>B</button>
-        <p>Banana</p>
-      </div>
-      <div className="options">
-        <button>C</button>
-        <p>Cow</p>
-      </div>
-      <div className="options">
-        <button>D</button>
-        <p>Donkey</p>
-      </div>
+      <Question
+        questionNumber={questionNumber}
+        question={questions[questionNumber]}
+        setQuestionNumber={setQuestionNumber}
+        setScore={setScore}
+        score={score}
+        maxQuestions={questions.length}
+      />
     </div>
   );
 };
