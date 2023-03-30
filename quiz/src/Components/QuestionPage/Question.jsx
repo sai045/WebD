@@ -14,12 +14,12 @@ export const Question = ({
   const checkAnswer = (guess) => {
     if (guess === question["Answer"]) {
       setScore(score + 1);
-      if (questionNumber + 1 === maxQuestions) {
-        navigate("/endpage");
-        return;
-      } else {
-        setQuestionNumber(questionNumber + 1);
-      }
+    }
+    if (questionNumber + 1 === maxQuestions) {
+      navigate("/endpage");
+      return;
+    } else {
+      setQuestionNumber(questionNumber + 1);
     }
   };
   return (

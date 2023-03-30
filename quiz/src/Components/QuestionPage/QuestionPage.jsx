@@ -15,17 +15,25 @@ const QuestionPage = ({ score, setScore }) => {
       Answer: "B"
     },
     {
-      Question: "What is 2+2?feq3wd",
+      Question: "What is 5+9?",
       A: "3",
       B: "4",
       C: "5",
-      D: "6",
-      Answer: "B"
+      D: "14",
+      Answer: "D"
     },
     {
-      Question: "What is 2+2?",
+      Question: "What is 1+34?",
       A: "3",
       B: "4",
+      C: "35",
+      D: "6",
+      Answer: "C"
+    },
+    {
+      Question: "What is 44+72?",
+      A: "3",
+      B: "116",
       C: "5",
       D: "6",
       Answer: "B"
