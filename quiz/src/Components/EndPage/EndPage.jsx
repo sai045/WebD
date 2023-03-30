@@ -39,6 +39,7 @@ const EndPage = ({ score, setScore }) => {
       <br />
       <button
         onClick={() => {
+          setScore(0)
           navigate("/");
         }}
       >
