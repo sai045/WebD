@@ -1,0 +1,72 @@
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .edit_container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+
+  .edit_label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .edit_input,
+  .edit_textarea {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+  }
+  
+  .save_btn,.cancel_btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .save_btn[type="submit"]:hover {
+    background-color: #2e8b57;
+  }
+  .cancel_btn{
+    background-color: rgb(225, 15, 15);
+    margin-left: 10px;
+  }
+
+  .cancel_btn:hover{
+    background-color: #d32f2f;
+  }
+  
+  /* button[type="submit"]:last-of-type {
+    background-color: #f44336;
+    margin-left: 10px;
+  }
+  
+  button[type="submit"]:last-of-type:hover {
+    background-color: #d32f2f;
+  } */
+
+  .edit_page_inputs{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
